@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma page simple</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f3f4f6;
+    }
+
+    header {
+      background: #2563eb;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+      color: #2563eb;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      color: #ffffff;
+      background: #2563eb;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur ma page</h1>
+    <p>Une page HTML simple</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>À propos</h2>
+      <p>Ceci est une page HTML simple avec un peu de CSS et de JavaScript.</p>
+    </section>
+
+    <section>
+      <h2>Liste</h2>
+      <ul>
+        <li>Premier élément</li>
+        <li>Deuxième élément</li>
+        <li>Troisième élément</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Interaction</h2>
+      <p id="message">Cliquez sur le bouton ci-dessous.</p>
+      <button type="button" id="bouton">Cliquez-moi</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ma page simple</p>
+  </footer>
+
+  <script>
+    let compteur = 0;
+    const message = document.getElementById("message");
+
+    document.getElementById("bouton").addEventListener("click", () => {
+      compteur++;
+      message.textContent = `Vous avez cliqué ${compteur} fois.`;
+    });
+  </script>
+</body>
+</html>
